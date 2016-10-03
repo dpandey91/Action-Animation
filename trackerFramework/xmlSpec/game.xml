@@ -22,13 +22,22 @@
 </world>
 
 <back>
-  <file>images/checkerboard.bmp</file>
+  <file>images/back.png</file>
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
   <factor>1</factor>
   <transparency>false</transparency>
 </back>
+
+<map>
+  <file>images/map.png</file>
+  <red>193</red>
+  <green>205</green>
+  <blue>205</blue>
+  <factor>2</factor>
+  <transparency>false</transparency>
+</map>
 
 <font name="font">
   <file>font/dyslexic-bold.otf</file>

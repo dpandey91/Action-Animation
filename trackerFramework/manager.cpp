@@ -20,6 +20,7 @@ Manager::Manager() :
   clock( Clock::getInstance() ),
   screen( io.getScreen() ),
   world("back", Gamedata::getInstance().getXmlInt("back/factor") ),
+  map("map", Gamedata::getInstance().getXmlInt("map/factor") ),
   viewport( Viewport::getInstance() ),
   sprites(),
   currentSprite(0),
@@ -43,6 +44,7 @@ Manager::Manager() :
 
 void Manager::draw() const {
   world.draw();
+  map.draw();
   for (unsigned i = 0; i < sprites.size(); ++i) {
     sprites[i]->draw();
   }
@@ -87,6 +89,7 @@ void Manager::update() {
     makeFrame();
   }
   world.update();
+  map.update();
   viewport.update(); // always update viewport last
 }
 
