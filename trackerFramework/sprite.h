@@ -10,7 +10,7 @@ public:
   Sprite(const std::string&, 
          const Vector2f& pos, const Vector2f& vel, const Frame*);
   Sprite(const Sprite& s);
-  Sprite& operator=(const Sprite&);
+  Sprite& operator=(const Sprite& rhs);
   
   virtual ~Sprite() { } 
 

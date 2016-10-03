@@ -45,13 +45,17 @@ Sprite::Sprite(const Sprite& s) :
   worldHeight(Gamedata::getInstance().getXmlInt("world/height"))
 { }
 
-Sprite& Sprite::operator=(const Sprite& sprite){
+Sprite& Sprite::operator=(const Sprite& rhs){
+    if(this == &rhs) return *this;
+    
     Drawable::operator=(sprite);
     frame = sprite.frame;
     frameWidth = sprite.frameWidth;
     frameHeight = sprite.frameHeight;
     worldWidth = sprite.worldWidth;
     worldHeight = sprite.worldHeight;
+    
+    return *this;
 }
 
 void Sprite::draw() const { 
