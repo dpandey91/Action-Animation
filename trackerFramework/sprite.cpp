@@ -45,6 +45,15 @@ Sprite::Sprite(const Sprite& s) :
   worldHeight(Gamedata::getInstance().getXmlInt("world/height"))
 { }
 
+Sprite& Sprite::operator=(const Sprite& sprite){
+    Drawable::operator=(sprite);
+    frame = sprite.frame;
+    frameWidth = sprite.frameWidth;
+    frameHeight = sprite.frameHeight;
+    worldWidth = sprite.worldWidth;
+    worldHeight = sprite.worldHeight;
+}
+
 void Sprite::draw() const { 
   Uint32 x = static_cast<Uint32>(X());
   Uint32 y = static_cast<Uint32>(Y());
