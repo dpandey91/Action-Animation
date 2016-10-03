@@ -22,7 +22,7 @@
 </world>
 
 <back>
-  <file>images/back.png</file>
+  <file>images/backplain.png</file>
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
@@ -31,13 +31,22 @@
 </back>
 
 <map>
-  <file>images/map.png</file>
+  <file>images/mapsmall.png</file>
+  <red>193</red>
+  <green>205</green>
+  <blue>205</blue>
+  <factor>1</factor>
+  <transparency>false</transparency>
+</map>
+
+<outline>
+  <file>images/outlinesmall.png</file>
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
   <factor>2</factor>
   <transparency>false</transparency>
-</map>
+</outline>
 
 <font name="font">
   <file>font/dyslexic-bold.otf</file>
