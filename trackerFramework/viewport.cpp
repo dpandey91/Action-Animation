@@ -12,8 +12,8 @@ Viewport::Viewport() :
   position(0, 0),
   viewWidth(gdata.getXmlInt("view/width")), 
   viewHeight(gdata.getXmlInt("view/height")),
-  worldWidth(WORLD_WIDTH),
-  worldHeight(WORLD_HEIGHT),
+  worldWidth(Gamedata::getInstance().getXmlInt("world/width")),
+  worldHeight(Gamedata::getInstance().getXmlInt("world/height")),
   objWidth(0), objHeight(0),
   objectToTrack(NULL) 
 {}

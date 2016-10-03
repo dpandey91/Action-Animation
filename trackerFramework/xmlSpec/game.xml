@@ -2,14 +2,14 @@
 <GameData>
 <!-- screenTitle is also used to identify you and your animation. 
      So make sure to include your name as part of the screenTitle -->
-<screenTitle>Brian Malloy's Star Animation</screenTitle>
+<screenTitle>Dipika's GOT Animation</screenTitle>
 <maxStringSize>50</maxStringSize>
 
 <frameCap>60</frameCap>
 <framesAreCapped>true</framesAreCapped>
 
 <frameMax>200</frameMax>
-<username>malloy</username>
+<username>dpandey</username>
 
 <view>
   <width>854</width>

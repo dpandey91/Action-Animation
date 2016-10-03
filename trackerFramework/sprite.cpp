@@ -13,8 +13,8 @@ Sprite::Sprite(const std::string& name) :
   frame( FrameFactory::getInstance().getFrame(name) ),
   frameWidth(frame->getWidth()),
   frameHeight(frame->getHeight()),
-  worldWidth(WORLD_WIDTH),
-  worldHeight(WORLD_HEIGHT)
+  worldWidth(Gamedata::getInstance().getXmlInt("world/width")),
+  worldHeight(Gamedata::getInstance().getXmlInt("world/height"))
 { }
 
 Sprite::Sprite(const string& n, const Vector2f& pos, const Vector2f& vel):
@@ -22,8 +22,8 @@ Sprite::Sprite(const string& n, const Vector2f& pos, const Vector2f& vel):
   frame( FrameFactory::getInstance().getFrame(n) ),
   frameWidth(frame->getWidth()),
   frameHeight(frame->getHeight()),
-  worldWidth(WORLD_WIDTH),
-  worldHeight(WORLD_HEIGHT)
+  worldWidth(Gamedata::getInstance().getXmlInt("world/width")),
+  worldHeight(Gamedata::getInstance().getXmlInt("world/height"))
 { }
 
 Sprite::Sprite(const string& n, const Vector2f& pos, const Vector2f& vel,
@@ -32,8 +32,8 @@ Sprite::Sprite(const string& n, const Vector2f& pos, const Vector2f& vel,
   frame( frm ),
   frameWidth(frame->getWidth()),
   frameHeight(frame->getHeight()),
-  worldWidth(WORLD_WIDTH),
-  worldHeight(WORLD_HEIGHT)
+  worldWidth(Gamedata::getInstance().getXmlInt("world/width")),
+  worldHeight(Gamedata::getInstance().getXmlInt("world/height"))
 { }
 
 Sprite::Sprite(const Sprite& s) :
@@ -41,8 +41,8 @@ Sprite::Sprite(const Sprite& s) :
   frame(s.frame),
   frameWidth(s.getFrame()->getWidth()),
   frameHeight(s.getFrame()->getHeight()),
-  worldWidth(WORLD_WIDTH),
-  worldHeight(WORLD_HEIGHT)
+  worldWidth(Gamedata::getInstance().getXmlInt("world/width")),
+  worldHeight(Gamedata::getInstance().getXmlInt("world/height"))
 { }
 
 void Sprite::draw() const { 

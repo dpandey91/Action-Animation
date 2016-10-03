@@ -47,7 +47,7 @@ void Manager::draw() const {
     sprites[i]->draw();
   }
 
-  io.printMessageValueAt("Seconds: ", clock->getSeconds(), 10, 20);
+  io.printMessageValueAt("Seconds: ", clock.getSeconds(), 10, 20);
   io.printMessageAt("Press T to switch sprites", 10, 45);
   io.printMessageAt(title, 10, 450);
   viewport.draw();
@@ -71,12 +71,12 @@ void Manager::switchSprite() {
 }
 
 void Manager::update() {
-  ++(*clock);
-  Uint32 ticks = clock->getElapsedTicks();
+  ++(clock);
+  Uint32 ticks = clock.getElapsedTicks();
 
-  static unsigned int lastSeconds = clock->getSeconds();
-  if ( clock->getSeconds() - lastSeconds == 5 ) {
-    lastSeconds = clock->getSeconds();
+  static unsigned int lastSeconds = clock.getSeconds();
+  if ( clock.getSeconds() - lastSeconds == 5 ) {
+    lastSeconds = clock.getSeconds();
     //switchSprite();
   }
 
@@ -107,11 +107,11 @@ void Manager::play() {
           switchSprite();
         }
         if ( keystate[SDLK_s] ) {
-          clock->toggleSloMo();
+          clock.toggleSloMo();
         }
         if ( keystate[SDLK_p] ) {
-          if ( clock->isPaused() ) clock->unpause();
-          else clock->pause();
+          if ( clock.isPaused() ) clock.unpause();
+          else clock.pause();
         }
         if (keystate[SDLK_F4] && !makeVideo) {
           std::cout << "Making video frames" << std::endl;

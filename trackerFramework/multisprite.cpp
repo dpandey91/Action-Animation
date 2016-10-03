@@ -18,8 +18,8 @@ MultiSprite::MultiSprite( const std::string& name) :
                     Gamedata::getInstance().getXmlInt(name+"/speedY"))
            ),
   frames( FrameFactory::getInstance().getFrames(name) ),
-  worldWidth(WORLD_WIDTH),
-  worldHeight(WORLD_HEIGHT),
+  worldWidth(Gamedata::getInstance().getXmlInt("world/width")),
+  worldHeight(Gamedata::getInstance().getXmlInt("world/height")),
 
   currentFrame(0),
   numberOfFrames( Gamedata::getInstance().getXmlInt(name+"/frames") ),

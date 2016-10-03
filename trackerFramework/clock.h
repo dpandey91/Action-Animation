@@ -5,14 +5,13 @@ class Manager;
 
 class Clock {
 public:
-  static Clock* getInstance();
+  static Clock& getInstance();
   unsigned int getTicks() const;
   unsigned int getTotalTicks() const { return sumOfAllTicks; }
 
 private:
   friend class Manager;
-  static Clock* instance;
-
+  
   bool started;
   bool paused;
   bool sloMo;

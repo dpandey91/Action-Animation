@@ -6,11 +6,11 @@
 #include "gamedata.h"
 #include "ioManager.h"
 
-Clock* Clock::getInstance() {
+Clock& Clock::getInstance() {
   if ( SDL_WasInit(SDL_INIT_VIDEO) == 0) {
     throw std::string("Must init SDL before Clock");
   }
-  if ( instance == NULL) instance = new Clock; 
+  static Clock instance;
   return instance;
 }
 
@@ -25,7 +25,7 @@ Clock::Clock() :
   sumOfAllTicks(0),
   timeAtStart(0), timeAtPause(0),
   currTicks(0), prevTicks(0), ticks(0) 
-  {
+{
   start();
 }
 

@@ -15,7 +15,7 @@ public:
 private:
   const bool env;
   const IOManager& io;
-  Clock* clock;
+  Clock clock;
 
   SDL_Surface * const screen;
   World world;

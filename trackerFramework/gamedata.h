@@ -5,9 +5,6 @@
 #include "vector2f.h"
 #include "parseXML.h"
 
-const int WORLD_WIDTH = 2000;
-const int WORLD_HEIGHT = 960;
-
 class Gamedata {
 public:
   static Gamedata& getInstance();
