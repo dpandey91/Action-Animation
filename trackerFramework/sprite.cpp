@@ -48,12 +48,12 @@ Sprite::Sprite(const Sprite& s) :
 Sprite& Sprite::operator=(const Sprite& rhs){
     if(this == &rhs) return *this;
     
-    Drawable::operator=(sprite);
-    frame = sprite.frame;
-    frameWidth = sprite.frameWidth;
-    frameHeight = sprite.frameHeight;
-    worldWidth = sprite.worldWidth;
-    worldHeight = sprite.worldHeight;
+    Drawable::operator=(rhs);
+    frame = rhs.frame;
+    frameWidth = rhs.frameWidth;
+    frameHeight = rhs.frameHeight;
+    worldWidth = rhs.worldWidth;
+    worldHeight = rhs.worldHeight;
     
     return *this;
 }
