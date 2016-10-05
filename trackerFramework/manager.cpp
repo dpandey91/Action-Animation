@@ -2,6 +2,7 @@
 #include <string>
 #include <iomanip>
 #include "multisprite.h"
+#include "twoWayMultisprite.h"
 #include "sprite.h"
 #include "gamedata.h"
 #include "manager.h"
