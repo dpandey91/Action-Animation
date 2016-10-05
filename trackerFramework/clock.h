@@ -1,5 +1,6 @@
 #include <SDL.h>
 #include <string>
+#include <deque>
 
 class Manager;
 
@@ -8,6 +9,7 @@ public:
   static Clock& getInstance();
   unsigned int getTicks() const;
   unsigned int getTotalTicks() const { return sumOfAllTicks; }
+  unsigned int getAvgFrameRate() const;
 
 private:
   friend class Manager;
@@ -27,6 +29,10 @@ private:
   unsigned int currTicks;
   unsigned int prevTicks;
   unsigned int ticks;
+  
+  unsigned int frameRateCap;
+  unsigned int sumAvg;
+  std::deque<unsigned int> fpsQue;
 
   unsigned int getElapsedTicks();
   Clock& operator++();

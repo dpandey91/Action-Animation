@@ -52,6 +52,7 @@ void Manager::draw() const {
   }
 
   io.printMessageValueAt("Seconds: ", clock.getSeconds(), 10, 20);
+  io.printMessageValueAt("fps: ", clock.getAvgFrameRate(), 10, 40);
   io.printMessageAt("Press T to switch sprites", 10, 45);
   io.printMessageAt(title, 10, 450);
   viewport.draw();

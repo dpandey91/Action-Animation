@@ -24,7 +24,10 @@ Clock::Clock() :
   tickSum(0),
   sumOfAllTicks(0),
   timeAtStart(0), timeAtPause(0),
-  currTicks(0), prevTicks(0), ticks(0) 
+  currTicks(0), prevTicks(0), ticks(0),
+  frameRateCap(Gamedata::getInstance().getXmlBool("frameRateAvg")),
+  sumAvg(0u),
+  fpsQue()
 {
   start();
 }
@@ -39,8 +42,11 @@ Clock::Clock(const Clock& c) :
   tickSum(c.tickSum),
   sumOfAllTicks(c.sumOfAllTicks),
   timeAtStart(c.timeAtStart), timeAtPause(c.timeAtPause),
-  currTicks(c.currTicks), prevTicks(c.prevTicks), ticks(c.ticks) 
-  {
+  currTicks(c.currTicks), prevTicks(c.prevTicks), ticks(c.ticks),
+  frameRateCap(c.frameRateCap),
+  sumAvg(c.sumAvg),
+  fpsQue(c.fpsQue)
+{
   start();
 }
 
@@ -99,7 +105,18 @@ unsigned int Clock::capFrameRate() const {
 
 Clock& Clock::operator++() { 
   if ( !paused ) {
-    ++frames; 
+    ++frames;
+
+    unsigned int elapsedSec = getSeconds();
+    unsigned int frame_rate = elapsedSec > 0 ? frames/elapsedSec : 0;
+    if(fpsQue.size() == frameRateCap){
+        unsigned int lastVal = fpsQue.back();
+        sumAvg -= lastVal;
+        fpsQue.pop_back();
+    }
+    
+    fpsQue.push_front(frame_rate);
+    sumAvg += frame_rate;
   }
   return *this;
 }
@@ -121,5 +138,9 @@ void Clock::unpause() {
     timeAtStart = SDL_GetTicks() - timeAtPause;
     paused = false;
   }
+}
+
+unsigned int Clock::getAvgFrameRate() const{
+    return sumAvg/frameRateCap;
 }
 
