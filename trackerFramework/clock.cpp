@@ -25,7 +25,7 @@ Clock::Clock() :
   sumOfAllTicks(0),
   timeAtStart(0), timeAtPause(0),
   currTicks(0), prevTicks(0), ticks(0),
-  frameRateCap(Gamedata::getInstance().getXmlBool("frameRateAvg")),
+  frameRateCap(Gamedata::getInstance().getXmlInt("frameRateAvg")),
   sumAvg(0u),
   fpsQue()
 {
