@@ -78,12 +78,12 @@
 </font>
 
 <spinstar>
-  <file>images/star.png</file>
+  <file>images/dragonsheet.png</file>
   <startLoc x="120" y="140"/>
-  <frames>4</frames>
+  <frames>12</frames>
   <frameInterval>20</frameInterval>
   <speedX>-200</speedX>
-  <speedY>200</speedY>
+  <speedY>10</speedY>
   <transparency>true</transparency>
 </spinstar>
 

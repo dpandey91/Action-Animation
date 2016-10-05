@@ -71,14 +71,14 @@ std::vector<Frame*> FrameFactory::getFrames(const std::string& name) {
   std::vector<SDL_Surface*> surfaces;
   frames.reserve(numberOfFrames);
 
-  Uint16 width = surface->w/numberOfFrames;
-  Uint16 height = surface->h;
+  Uint16 width = surface->w;
+  Uint16 height = surface->h/numberOfFrames;
 
   SDL_Surface* surf;
   for (unsigned i = 0; i < numberOfFrames; ++i) {
-    unsigned frameX = i * width;
+    unsigned frameY = i * height;
    surf = ExtractSurface::getInstance().
-               get(surface, width, height, frameX, 0); 
+               get(surface, width, height, 0, frameY); 
     surfaces.push_back( surf );
     frames.push_back( new Frame(surf) );
   }
