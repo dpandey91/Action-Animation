@@ -29,8 +29,8 @@ TwoWayMultiSprite::TwoWayMultiSprite( const std::string& name) :
                     Gamedata::getInstance().getXmlInt(name+"/speedY"))
            ),
   frames( FrameFactory::getInstance().getTwoWayFrames(name) ),
-  worldWidth(WORLD_WIDTH),
-  worldHeight(WORLD_HEIGHT),
+  worldWidth(Gamedata::getInstance().getXmlInt("world/width")),
+  worldHeight(Gamedata::getInstance().getXmlInt("world/height")),
   currentFrame(0),
   numberOfFrames( Gamedata::getInstance().getXmlInt(name+"/xframes") * Gamedata::getInstance().getXmlInt(name+"/yframes") * 2 ),
   frameInterval( Gamedata::getInstance().getXmlInt(name+"/frameInterval") ),
