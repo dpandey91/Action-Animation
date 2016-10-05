@@ -127,10 +127,10 @@ void Manager::play() {
           else clock.pause();
         }
         if ( keystate[SDLK_d] ) {
-          world.zoomIn();
-          map.zoomIn();
-          castleBig.zoomIn();
-          castleSmall.zoomIn();
+          world.zoomIn(2);
+          map.zoomIn(2);
+          castleBig.zoomIn(2);
+          castleSmall.zoomIn(2);
         }        
         if (keystate[SDLK_F4] && !makeVideo) {
           std::cout << "Making video frames" << std::endl;
