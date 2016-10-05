@@ -71,13 +71,13 @@
 <font name="font">
   <file>font/dyslexic-bold.otf</file>
   <size>16</size>
-  <red>0</red>
-  <green>0</green>
-  <blue>0</blue>
+  <red>255</red>
+  <green>255</green>
+  <blue>255</blue>
   <unused>0</unused>
 </font>
 
-<spinstar>
+<dragon1>
   <file>images/dragonsheet.png</file>
   <startLoc x="120" y="140"/>
   <frames>12</frames>
@@ -85,22 +85,26 @@
   <speedX>-200</speedX>
   <speedY>10</speedY>
   <transparency>true</transparency>
-</spinstar>
+</dragon1>
 
-<star>
-  <file>images/yellowstar32.png</file>
-  <startLoc x="320" y="240"/>
-  <speedX>-175</speedX>
-  <speedY>-175</speedY>
+<ship1>
+  <file>images/ship1.png</file>
+  <startLoc x="430" y="240"/>
+  <frames>12</frames>
+  <frameInterval>20</frameInterval>
+  <speedX>-100</speedX>
+  <speedY>0</speedY>
   <transparency>true</transparency>
-</star>
+</ship1>
 
-<greenorb>
-  <file>images/greenball.bmp</file>
-  <startLoc x="320" y="240"/>
-  <speedX>175</speedX>
-  <speedY>175</speedY>
+<ship2>
+  <file>images/ship2.png</file>
+  <startLoc x="560" y="340"/>
+  <frames>12</frames>
+  <frameInterval>20</frameInterval>
+  <speedX>100</speedX>
+  <speedY>0</speedY>
   <transparency>true</transparency>
-</greenorb>
+</ship2>
 
 </GameData>

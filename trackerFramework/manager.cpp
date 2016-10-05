@@ -39,9 +39,9 @@ Manager::Manager() :
   }
   SDL_WM_SetCaption(title.c_str(), NULL);
   atexit(SDL_Quit);
-  sprites.push_back( new MultiSprite("spinstar") );
-  sprites.push_back( new Sprite("star") );
-  sprites.push_back( new Sprite("greenorb") );
+  sprites.push_back( new MultiSprite("dragon1") );
+  sprites.push_back( new Sprite("ship1") );
+  sprites.push_back( new Sprite("ship2") );
   viewport.setObjectToTrack(sprites[currentSprite]);
 }
 
@@ -57,7 +57,7 @@ void Manager::draw() const {
 
   io.printMessageValueAt("Seconds: ", clock.getSeconds(), 10, 20);
   io.printMessageValueAt("fps: ", clock.getAvgFrameRate(), 10, 40);
-  io.printMessageAt("Press T to switch sprites", 10, 45);
+  io.printMessageAt("Press T to switch sprites", 10, 65);
   io.printMessageAt(title, 10, 450);
   viewport.draw();
 
