@@ -22,3 +22,8 @@ void World::draw() const {
   frame->draw(0, viewY, frameWidth-viewX, 0); 
 }
 
+void World::zoomIn(double val) const { 
+  frame->zoomIn(viewX, viewY, val); 
+  frame->zoomIn(0, viewY, val); 
+}
+

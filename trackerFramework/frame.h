@@ -21,6 +21,7 @@ public:
   // on a separate surface:
   void draw(Sint16 sx, Sint16 sy, Sint16 dx, Sint16 dy) const;
   void draw(Sint16 x, Sint16 y, double angle) const;
+  void zoomIn(Sint16 x, Sint16 y, double zoomFactor) const;
 
   Uint16 getWidth()  const { return surface->w; }
   Uint16 getHeight() const { return surface->h; }

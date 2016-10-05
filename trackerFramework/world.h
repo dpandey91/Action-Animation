@@ -9,6 +9,7 @@ public:
   // ~World() { ; } // The frame will be deleted by the FrameFactory
   void update();
   void draw() const;
+  void zoomIn(double val) const; 
 private:
   const IOManager& io;
   Frame* const frame;
