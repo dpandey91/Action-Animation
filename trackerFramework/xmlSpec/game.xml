@@ -21,6 +21,8 @@
   <height>960</height>
 </world>
 
+<frameRateAvg>200</frameRateAvg>
+
 <back>
   <file>images/backplain.png</file>
   <red>193</red>
