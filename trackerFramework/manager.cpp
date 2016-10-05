@@ -40,8 +40,11 @@ Manager::Manager() :
   SDL_WM_SetCaption(title.c_str(), NULL);
   atexit(SDL_Quit);
   sprites.push_back( new MultiSprite("dragon1") );
+  sprites.push_back( new TwoWayMultiSprite("dragon2") );
+  sprites.push_back( new TwoWayMultiSprite("dragon3") );
   sprites.push_back( new Sprite("ship1") );
   sprites.push_back( new Sprite("ship2") );
+  sprites.push_back( new Sprite("ship3") );
   viewport.setObjectToTrack(sprites[currentSprite]);
 }
 
@@ -50,10 +53,12 @@ void Manager::draw() const {
   map.draw();
   castleBig.draw();
   castleSmall.draw();
-  cloud.draw();
+  
   for (unsigned i = 0; i < sprites.size(); ++i) {
     sprites[i]->draw();
   }
+  
+  cloud.draw();
 
   io.printMessageValueAt("Seconds: ", clock.getSeconds(), 10, 20);
   io.printMessageValueAt("fps: ", clock.getAvgFrameRate(), 10, 40);

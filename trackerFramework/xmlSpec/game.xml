@@ -81,30 +81,32 @@
   <filePositive>images/dragonsheet1-right.png</filePositive>
   <fileNegative>images/dragonsheet1-left.png</fileNegative>
   <startLoc x="1110" y="121"/>
-  <frames>12</frames>
+  <xframes>1</xframes>
+  <yframes>12</yframes>
   <frameInterval>20</frameInterval>
   <speedX>-200</speedX>
   <speedY>10</speedY>
-  <transparency>true</transparency>
+  <transparency>false</transparency>
 </dragon1>
 
 <dragon2>
   <filePositive>images/dragonsheet2-right.png</filePositive>
   <fileNegative>images/dragonsheet2-left.png</fileNegative>
   <startLoc x="1110" y="121"/>
-  <frames>12</frames>
-  <frameInterval>20</frameInterval>
-  <speedX>-200</speedX>
-  <speedY>10</speedY>
-  <transparency>true</transparency>
+  <xframes>1</xframes>
+  <yframes>6</yframes>
+  <frameInterval>50</frameInterval>
+  <speedX>200</speedX>
+  <speedY>-10</speedY>
+  <transparency>false</transparency>
 </dragon2>
 
 <dragon3>
   <filePositive>images/dragonsheet3-right.png</filePositive>
   <fileNegative>images/dragonsheet3-left.png</fileNegative>
   <startLoc x="67" y="158"/>
-  <xframes>12</xframes>
-  <yframes>12</yframes>
+  <xframes>1</xframes>
+  <yframes>20</yframes>
   <frameInterval>20</frameInterval>
   <speedX>-200</speedX>
   <speedY>10</speedY>
