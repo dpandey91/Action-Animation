@@ -20,7 +20,9 @@ private:
   SDL_Surface * const screen;
   World world;
   World map;
-  World outline;
+  World castleBig;
+  World castleSmall;
+  World cloud;
   Viewport& viewport;
 
   std::vector<Drawable*> sprites;

@@ -21,7 +21,9 @@ Manager::Manager() :
   screen( io.getScreen() ),
   world("back", Gamedata::getInstance().getXmlInt("back/factor") ),
   map("map", Gamedata::getInstance().getXmlInt("map/factor") ),
-  outline("outline", Gamedata::getInstance().getXmlInt("outline/factor") ),
+  castleBig("castleBig", Gamedata::getInstance().getXmlInt("castleBig/factor") ),
+  castleSmall("castleSmall", Gamedata::getInstance().getXmlInt("castleSmall/factor") ),
+  cloud("cloud", Gamedata::getInstance().getXmlInt("cloud/factor") ),
   viewport( Viewport::getInstance() ),
   sprites(),
   currentSprite(0),
@@ -46,7 +48,9 @@ Manager::Manager() :
 void Manager::draw() const {
   world.draw();
   map.draw();
-  outline.draw();
+  castleBig.draw();
+  castleSmall.draw();
+  cloud.draw();
   for (unsigned i = 0; i < sprites.size(); ++i) {
     sprites[i]->draw();
   }
@@ -93,7 +97,9 @@ void Manager::update() {
   }
   world.update();
   map.update();
-  outline.update();
+  castleBig.update();
+  castleSmall.update();
+  cloud.update();
   viewport.update(); // always update viewport last
 }
 

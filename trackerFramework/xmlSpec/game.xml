@@ -24,7 +24,7 @@
 <frameRateAvg>200</frameRateAvg>
 
 <back>
-  <file>images/backplain.png</file>
+  <file>images/background.png</file>
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
@@ -37,18 +37,36 @@
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
-  <factor>1</factor>
+  <factor>2</factor>
   <transparency>false</transparency>
 </map>
 
-<outline>
-  <file>images/outlinesmall.png</file>
+<castleBig>
+  <file>images/castleBig.png</file>
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
   <factor>2</factor>
   <transparency>false</transparency>
-</outline>
+</castleBig>
+
+<castleSmall>
+  <file>images/castleSmall.png</file>
+  <red>193</red>
+  <green>205</green>
+  <blue>205</blue>
+  <factor>2</factor>
+  <transparency>false</transparency>
+</castleSmall>
+
+<cloud>
+  <file>images/cloud.png</file>
+  <red>193</red>
+  <green>205</green>
+  <blue>205</blue>
+  <factor>3</factor>
+  <transparency>false</transparency>
+</cloud>
 
 <font name="font">
   <file>font/dyslexic-bold.otf</file>
