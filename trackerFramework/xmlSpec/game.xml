@@ -33,7 +33,7 @@
 </back>
 
 <map>
-  <file>images/mapsmall.png</file>
+  <file>images/mapsmall2.png</file>
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
@@ -42,7 +42,7 @@
 </map>
 
 <castleBig>
-  <file>images/castleBig.png</file>
+  <file>images/castleBig2.png</file>
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
@@ -51,7 +51,7 @@
 </castleBig>
 
 <castleSmall>
-  <file>images/castleSmall.png</file>
+  <file>images/castleSmall2.png</file>
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
