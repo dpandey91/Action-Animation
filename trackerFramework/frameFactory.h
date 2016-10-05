@@ -38,6 +38,7 @@ public:
   // width and height will be obtained from the XML:
   std::vector<Frame*> getFrames(const std::string&);
 
+  std::vector<Frame*> getTwoWayFrames(const std::string& name);  
 private:
   const Gamedata& gdata;
   // The next map stores surfaces for single frame sprites:
