@@ -66,21 +66,26 @@ std::vector<Frame*> FrameFactory::getFrames(const std::string& name) {
   // It wasn't in the map, so we have to make the vector of Frames:
   SDL_Surface* surface = IOManager::
      getInstance().loadAndSet(gdata.getXmlStr(name+"/file"), true);
-  unsigned numberOfFrames = gdata.getXmlInt(name+"/frames");
+  unsigned numberOfXFrames = gdata.getXmlInt(name+"/xframes");
+  unsigned numberOfYFrames = gdata.getXmlInt(name+"/yframes");
   std::vector<Frame*> frames;
   std::vector<SDL_Surface*> surfaces;
-  frames.reserve(numberOfFrames);
+  frames.reserve(numberOfXFrames*numberOfYFrames);
 
-  Uint16 width = surface->w;
-  Uint16 height = surface->h/numberOfFrames;
+  Uint16 width = surface->w/numberOfXFrames;
+  Uint16 height = surface->h/numberOfYFrames;;
 
   SDL_Surface* surf;
-  for (unsigned i = 0; i < numberOfFrames; ++i) {
-    unsigned frameY = i * height;
-   surf = ExtractSurface::getInstance().
-               get(surface, width, height, 0, frameY); 
-    surfaces.push_back( surf );
-    frames.push_back( new Frame(surf) );
+  for (unsigned i = 0; i < numberOfYFrames; ++i) {
+      for (unsigned j = 0; j < numberOfXFrames; ++j){
+                 
+        unsigned frameY = i * height;
+        unsigned frameX = j * width;
+        surf = ExtractSurface::getInstance().
+               get(surface, width, height, frameX, frameY); 
+        surfaces.push_back( surf );
+        frames.push_back( new Frame(surf) );
+    } 
   }
   SDL_FreeSurface(surface);
   multiSurfaces[name] = surfaces;

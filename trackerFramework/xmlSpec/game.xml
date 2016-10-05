@@ -78,8 +78,9 @@
 </font>
 
 <dragon1>
-  <file>images/dragonsheet.png</file>
-  <startLoc x="120" y="140"/>
+  <filePositive>images/dragonsheet1-right.png</filePositive>
+  <fileNegative>images/dragonsheet1-left.png</fileNegative>
+  <startLoc x="1110" y="121"/>
   <frames>12</frames>
   <frameInterval>20</frameInterval>
   <speedX>-200</speedX>
@@ -87,10 +88,32 @@
   <transparency>true</transparency>
 </dragon1>
 
+<dragon2>
+  <filePositive>images/dragonsheet2-right.png</filePositive>
+  <fileNegative>images/dragonsheet2-left.png</fileNegative>
+  <startLoc x="1110" y="121"/>
+  <frames>12</frames>
+  <frameInterval>20</frameInterval>
+  <speedX>-200</speedX>
+  <speedY>10</speedY>
+  <transparency>true</transparency>
+</dragon2>
+
+<dragon3>
+  <filePositive>images/dragonsheet3-right.png</filePositive>
+  <fileNegative>images/dragonsheet3-left.png</fileNegative>
+  <startLoc x="67" y="158"/>
+  <xframes>12</xframes>
+  <yframes>12</yframes>
+  <frameInterval>20</frameInterval>
+  <speedX>-200</speedX>
+  <speedY>10</speedY>
+  <transparency>true</transparency>
+</dragon3>
+
 <ship1>
   <file>images/ship1.png</file>
-  <startLoc x="430" y="240"/>
-  <frames>12</frames>
+  <startLoc x="640" y="560"/>
   <frameInterval>20</frameInterval>
   <speedX>-100</speedX>
   <speedY>0</speedY>
@@ -99,12 +122,20 @@
 
 <ship2>
   <file>images/ship2.png</file>
-  <startLoc x="560" y="340"/>
-  <frames>12</frames>
+  <startLoc x="978" y="63"/>
+  <frameInterval>20</frameInterval>
+  <speedX>-100</speedX>
+  <speedY>0</speedY>
+  <transparency>true</transparency>
+</ship2>
+
+<ship3>
+  <file>images/ship3.png</file>
+  <startLoc x="458" y="88"/>
   <frameInterval>20</frameInterval>
   <speedX>100</speedX>
   <speedY>0</speedY>
   <transparency>true</transparency>
-</ship2>
+</ship3>
 
 </GameData>
