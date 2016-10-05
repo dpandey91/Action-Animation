@@ -17,8 +17,8 @@
 </view>
 
 <world>
-  <width>2000</width>
-  <height>960</height>
+  <width>1500</width>
+  <height>760</height>
 </world>
 
 <frameRateAvg>200</frameRateAvg>
@@ -37,7 +37,7 @@
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
-  <factor>2</factor>
+  <factor>1</factor>
   <transparency>false</transparency>
 </map>
 
@@ -46,7 +46,7 @@
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
-  <factor>2</factor>
+  <factor>1</factor>
   <transparency>false</transparency>
 </castleBig>
 
@@ -55,7 +55,7 @@
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
-  <factor>2</factor>
+  <factor>1</factor>
   <transparency>false</transparency>
 </castleSmall>
 
@@ -64,7 +64,7 @@
   <red>193</red>
   <green>205</green>
   <blue>205</blue>
-  <factor>3</factor>
+  <factor>2</factor>
   <transparency>false</transparency>
 </cloud>
 
@@ -78,38 +78,37 @@
 </font>
 
 <dragon1>
-  <filePositive>images/dragonsheet1-right.png</filePositive>
-  <fileNegative>images/dragonsheet1-left.png</fileNegative>
-  <startLoc x="1110" y="121"/>
+  <file>images/dragonsheet.png</file>
+  <startLoc x="90" y="191"/>
   <xframes>1</xframes>
   <yframes>12</yframes>
   <frameInterval>20</frameInterval>
-  <speedX>-200</speedX>
-  <speedY>10</speedY>
+  <speedX>-100</speedX>
+  <speedY>1</speedY>
   <transparency>false</transparency>
 </dragon1>
 
 <dragon2>
   <filePositive>images/dragonsheet2-right.png</filePositive>
   <fileNegative>images/dragonsheet2-left.png</fileNegative>
-  <startLoc x="1110" y="121"/>
+  <startLoc x="84" y="270"/>
   <xframes>1</xframes>
   <yframes>6</yframes>
   <frameInterval>50</frameInterval>
-  <speedX>200</speedX>
-  <speedY>-10</speedY>
+  <speedX>-100</speedX>
+  <speedY>1</speedY>
   <transparency>false</transparency>
 </dragon2>
 
 <dragon3>
   <filePositive>images/dragonsheet3-right.png</filePositive>
   <fileNegative>images/dragonsheet3-left.png</fileNegative>
-  <startLoc x="67" y="158"/>
+  <startLoc x="67" y="100"/>
   <xframes>1</xframes>
   <yframes>20</yframes>
   <frameInterval>20</frameInterval>
-  <speedX>-200</speedX>
-  <speedY>10</speedY>
+  <speedX>-100</speedX>
+  <speedY>0</speedY>
   <transparency>true</transparency>
 </dragon3>
 
@@ -117,7 +116,7 @@
   <file>images/ship1.png</file>
   <startLoc x="640" y="560"/>
   <frameInterval>20</frameInterval>
-  <speedX>-100</speedX>
+  <speedX>-10</speedX>
   <speedY>0</speedY>
   <transparency>true</transparency>
 </ship1>
@@ -126,7 +125,7 @@
   <file>images/ship2.png</file>
   <startLoc x="978" y="63"/>
   <frameInterval>20</frameInterval>
-  <speedX>-100</speedX>
+  <speedX>-10</speedX>
   <speedY>0</speedY>
   <transparency>true</transparency>
 </ship2>
@@ -135,7 +134,7 @@
   <file>images/ship3.png</file>
   <startLoc x="458" y="88"/>
   <frameInterval>20</frameInterval>
-  <speedX>100</speedX>
+  <speedX>10</speedX>
   <speedY>0</speedY>
   <transparency>true</transparency>
 </ship3>

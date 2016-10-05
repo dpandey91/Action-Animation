@@ -40,9 +40,10 @@ Manager::Manager() :
   }
   SDL_WM_SetCaption(title.c_str(), NULL);
   atexit(SDL_Quit);
-  sprites.push_back( new MultiSprite("dragon1") );
+ // sprites.push_back( new MultiSprite("dragon1") );
   sprites.push_back( new TwoWayMultiSprite("dragon2") );
   sprites.push_back( new TwoWayMultiSprite("dragon3") );
+  sprites.push_back( new MultiSprite("dragon1") );
   sprites.push_back( new Sprite("ship1") );
   sprites.push_back( new Sprite("ship2") );
   sprites.push_back( new Sprite("ship3") );
@@ -59,7 +60,7 @@ void Manager::draw() const {
     sprites[i]->draw();
   }
   
-  cloud.draw();
+//  cloud.draw();
 
   io.printMessageValueAt("Seconds: ", clock.getSeconds(), 10, 20);
   io.printMessageValueAt("fps: ", clock.getAvgFrameRate(), 10, 40);
