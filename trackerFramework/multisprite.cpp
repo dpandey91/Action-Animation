@@ -74,7 +74,8 @@ void MultiSprite::draw() const {
 void MultiSprite::update(Uint32 ticks) {
   
   Vector2f currPos = getPosition();
-  if(getEndPosition() != -1 || currPos < getEndPosition() || bComeback){
+  Vector2f endPos = getEndPosition();
+  if(endPos != -1 || currPos < endPos || bComeback){
       advanceFrame(ticks);
 
       Vector2f incr = getVelocity() * static_cast<float>(ticks) * 0.001;
@@ -89,14 +90,12 @@ void MultiSprite::update(Uint32 ticks) {
       }
       
       if(bComeback){
-        if ( Y() > worldHeight-frameHeight || Y() >= getEndPosition()[1]) {
+        if ( Y() > worldHeight-frameHeight || (endPos[1] != -1 && Y() >= getEndPosition()[1])) {
             velocityY( -abs( velocityY() ) );
         }
-        if ( X() > worldWidth-frameWidth || X() >= getEndPosition()[0]) {
+        if ( X() > worldWidth-frameWidth || (endPos[0] != -1 && X() >= getEndPosition()[0])) {
             velocityX( -abs( velocityX() ) );
         }
       }      
   }
-  
-
 }
