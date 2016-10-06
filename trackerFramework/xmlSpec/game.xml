@@ -81,10 +81,10 @@
   <file>images/fireballsheet.png</file>
   <startLoc x="90" y="191"/>
   <xframes>1</xframes>
-  <yframes>63</yframes>
+  <yframes>64</yframes>
   <frameInterval>20</frameInterval>
   <speedX>-200</speedX>
-  <speedY>10</speedY>
+  <speedY>100</speedY>
   <comeback>true</comeback>
   <transparency>false</transparency>
 </dragon1>
