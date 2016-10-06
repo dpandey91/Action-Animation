@@ -11,11 +11,11 @@
 // and must have.
 class Drawable {
 public:
-  Drawable(const std::string& n, const Vector2f& pos, const Vector2f& vel): 
-    name(n), position(pos), velocity(vel) {}
+  Drawable(const bool aComeback, const std::string& n, const Vector2f& pos, const Vector2f& vel): 
+    bComeback(aComeback), name(n), position(pos), velocity(vel) {}
 
   Drawable(const Drawable& s) : 
-    name(s.name), position(s.position), velocity(s.velocity)
+    bComeback(s.bComeback), name(s.name), position(s.position), velocity(s.velocity)
     { }
 
   virtual ~Drawable() {}
@@ -47,6 +47,9 @@ public:
     throw std::string("No collidedWith");  
   }
 
+protected:
+  bool bComeback;
+  
 private:
   std::string name;
   Vector2f position;

@@ -11,7 +11,8 @@ void MultiSprite::advanceFrame(Uint32 ticks) {
 }
 
 MultiSprite::MultiSprite( const std::string& name) :
-  Drawable(name, 
+  Drawable(Gamedata::getInstance().getXmlBool(name+"/comeback"),
+           name,
            Vector2f(Gamedata::getInstance().getXmlInt(name+"/startLoc/x"), 
                     Gamedata::getInstance().getXmlInt(name+"/startLoc/y")), 
            Vector2f(Gamedata::getInstance().getXmlInt(name+"/speedX"),
@@ -56,15 +57,17 @@ void MultiSprite::update(Uint32 ticks) {
   if ( Y() < 0) {
     velocityY( abs( velocityY() ) );
   }
-  if ( Y() > worldHeight-frameHeight) {
-    velocityY( -abs( velocityY() ) );
-  }
-
+  
   if ( X() < 0) {
     velocityX( abs( velocityX() ) );
   }
-  if ( X() > worldWidth-frameWidth) {
-    velocityX( -abs( velocityX() ) );
-  }  
-
+  
+  if(bComeback){
+    if ( Y() > worldHeight-frameHeight) {
+        velocityY( -abs( velocityY() ) );
+    }
+    if ( X() > worldWidth-frameWidth) {
+        velocityX( -abs( velocityX() ) );
+    }
+  }
 }

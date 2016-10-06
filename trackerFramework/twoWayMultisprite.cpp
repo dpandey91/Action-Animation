@@ -22,7 +22,8 @@ void TwoWayMultiSprite::advanceFrame(Uint32 ticks) {
 }
 
 TwoWayMultiSprite::TwoWayMultiSprite( const std::string& name) :
-  Drawable(name, 
+  Drawable(Gamedata::getInstance().getXmlBool(name+"/comeback"),
+           name,
            Vector2f(Gamedata::getInstance().getXmlInt(name+"/startLoc/x"), 
                     Gamedata::getInstance().getXmlInt(name+"/startLoc/y")), 
            Vector2f(Gamedata::getInstance().getXmlInt(name+"/speedX"),

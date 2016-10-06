@@ -4,7 +4,8 @@
 #include "frameFactory.h"
 
 Sprite::Sprite(const std::string& name) :
-  Drawable(name,
+  Drawable(Gamedata::getInstance().getXmlBool(name+"/comeback"),
+           name,           
            Vector2f(Gamedata::getInstance().getXmlInt(name+"/startLoc/x"), 
                     Gamedata::getInstance().getXmlInt(name+"/startLoc/y")), 
            Vector2f(Gamedata::getInstance().getXmlInt(name+"/speedX"), 
@@ -17,8 +18,8 @@ Sprite::Sprite(const std::string& name) :
   worldHeight(Gamedata::getInstance().getXmlInt("world/height"))
 { }
 
-Sprite::Sprite(const string& n, const Vector2f& pos, const Vector2f& vel):
-  Drawable(n, pos, vel), 
+Sprite::Sprite(const string& n, const bool aComeback, const Vector2f& pos, const Vector2f& vel):
+  Drawable(n, aComeback, pos, vel), 
   frame( FrameFactory::getInstance().getFrame(n) ),
   frameWidth(frame->getWidth()),
   frameHeight(frame->getHeight()),
@@ -26,9 +27,9 @@ Sprite::Sprite(const string& n, const Vector2f& pos, const Vector2f& vel):
   worldHeight(Gamedata::getInstance().getXmlInt("world/height"))
 { }
 
-Sprite::Sprite(const string& n, const Vector2f& pos, const Vector2f& vel,
+Sprite::Sprite(const string& n, const bool aComeback, const Vector2f& pos, const Vector2f& vel,
                const Frame* frm):
-  Drawable(n, pos, vel), 
+  Drawable(n, aComeback, pos, vel), 
   frame( frm ),
   frameWidth(frame->getWidth()),
   frameHeight(frame->getHeight()),
@@ -75,14 +76,17 @@ void Sprite::update(Uint32 ticks) {
   if ( Y() < 0) {
     velocityY( abs( velocityY() ) );
   }
-  if ( Y() > worldHeight-frameHeight) {
-    velocityY( -abs( velocityY() ) );
-  }
 
   if ( X() < 0) {
     velocityX( abs( velocityX() ) );
   }
-  if ( X() > worldWidth-frameWidth) {
-    velocityX( -abs( velocityX() ) );
-  }  
+  
+  if(bComeback){
+    if ( Y() > worldHeight-frameHeight) {
+        velocityY( -abs( velocityY() ) );
+    }
+    if ( X() > worldWidth-frameWidth) {
+        velocityX( -abs( velocityX() ) );
+    }
+  }
 }
