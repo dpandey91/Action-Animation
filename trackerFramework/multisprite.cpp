@@ -71,31 +71,26 @@ void MultiSprite::draw() const {
   frames[currentFrame]->draw(x, y);
 }
 
-void MultiSprite::update(Uint32 ticks) {
+void MultiSprite::update(Uint32 ticks) { 
+  advanceFrame(ticks);
+
+  Vector2f incr = getVelocity() * static_cast<float>(ticks) * 0.001;
+  setPosition(getPosition() + incr);
+
+  if ( Y() < 0) {
+    velocityY( abs( velocityY() ) );
+  }
   
-  Vector2f currPos = getPosition();
-  Vector2f endPos = getEndPosition();
-  if(endPos != -1 || !(currPos > endPos) || bComeback){
-      advanceFrame(ticks);
-
-      Vector2f incr = getVelocity() * static_cast<float>(ticks) * 0.001;
-      setPosition(currPos + incr);
-
-      if ( Y() < 0) {
-        velocityY( abs( velocityY() ) );
-      }
-      
-      if ( X() < 0) {
-        velocityX( abs( velocityX() ) );
-      }
-      
-      if(bComeback){
-        if ( Y() > worldHeight-frameHeight || (endPos[1] != -1 && Y() >= getEndPosition()[1])) {
-            velocityY( -abs( velocityY() ) );
-        }
-        if ( X() > worldWidth-frameWidth || (endPos[0] != -1 && X() >= getEndPosition()[0])) {
-            velocityX( -abs( velocityX() ) );
-        }
-      }      
+  if ( X() < 0) {
+    velocityX( abs( velocityX() ) );
+  }
+  
+  if(bComeback){
+    if ( Y() > worldHeight-frameHeight) {
+        velocityY( -abs( velocityY() ) );
+    }
+    if ( X() > worldWidth-frameWidth) {
+        velocityX( -abs( velocityX() ) );
+    }
   }
 }

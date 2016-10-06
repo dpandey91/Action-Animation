@@ -12,7 +12,7 @@
 class Drawable {
 public:
   Drawable(const bool aComeback, const std::string& n, const Vector2f& pos, const Vector2f& endpos, const Vector2f& vel): 
-    bComeback(aComeback), name(n), position(pos), endposition(endpos), velocity(vel) {}
+    bComeback(aComeback), name(n), position(pos), endposition(endpos) velocity(vel) {}
 
   Drawable(const Drawable& s) : 
     bComeback(s.bComeback), name(s.name), position(s.position), endposition(s.endposition), velocity(s.velocity)
@@ -42,8 +42,6 @@ public:
   void setVelocity(const Vector2f& vel) { velocity = vel;  }
   const Vector2f& getPosition() const   { return position; }
   void setPosition(const Vector2f& pos) { position = pos;  }
-  const Vector2f& getEndPosition() const   { return endposition; }
-  void setEndPosition(const Vector2f& pos) { endposition = pos;  }
 
   virtual bool collidedWith(const Drawable*) const { 
     throw std::string("No collidedWith");  
