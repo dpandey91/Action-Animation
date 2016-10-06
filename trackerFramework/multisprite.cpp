@@ -14,7 +14,9 @@ MultiSprite::MultiSprite( const std::string& name) :
   Drawable(Gamedata::getInstance().getXmlBool(name+"/comeback"),
            name,
            Vector2f(Gamedata::getInstance().getXmlInt(name+"/startLoc/x"), 
-                    Gamedata::getInstance().getXmlInt(name+"/startLoc/y")), 
+                    Gamedata::getInstance().getXmlInt(name+"/startLoc/y")),
+           Vector2f(Gamedata::getInstance().getXmlInt(name+"/endLoc/x"), 
+                    Gamedata::getInstance().getXmlInt(name+"/endLoc/y")),                      
            Vector2f(Gamedata::getInstance().getXmlInt(name+"/speedX"),
                     Gamedata::getInstance().getXmlInt(name+"/speedY"))
            ),
@@ -33,7 +35,9 @@ MultiSprite::MultiSprite(const std::string& name, const std::vector<Frame *>& fm
   Drawable(Gamedata::getInstance().getXmlBool(name+"/comeback"),
            name,
            Vector2f(Gamedata::getInstance().getXmlInt(name+"/startLoc/x"), 
-                    Gamedata::getInstance().getXmlInt(name+"/startLoc/y")), 
+                    Gamedata::getInstance().getXmlInt(name+"/startLoc/y")),
+           Vector2f(Gamedata::getInstance().getXmlInt(name+"/endLoc/x"), 
+                    Gamedata::getInstance().getXmlInt(name+"/endLoc/y")),                    
            Vector2f(Gamedata::getInstance().getXmlInt(name+"/speedX"),
                     Gamedata::getInstance().getXmlInt(name+"/speedY"))
            ),

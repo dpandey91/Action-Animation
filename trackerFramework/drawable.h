@@ -11,11 +11,11 @@
 // and must have.
 class Drawable {
 public:
-  Drawable(const bool aComeback, const std::string& n, const Vector2f& pos, const Vector2f& vel): 
-    bComeback(aComeback), name(n), position(pos), velocity(vel) {}
+  Drawable(const bool aComeback, const std::string& n, const Vector2f& pos, const Vector2f& endpos, const Vector2f& vel): 
+    bComeback(aComeback), name(n), position(pos), endposition(endpos) velocity(vel) {}
 
   Drawable(const Drawable& s) : 
-    bComeback(s.bComeback), name(s.name), position(s.position), velocity(s.velocity)
+    bComeback(s.bComeback), name(s.name), position(s.position), endposition(s.endposition), velocity(s.velocity)
     { }
 
   virtual ~Drawable() {}
@@ -53,6 +53,7 @@ protected:
 private:
   std::string name;
   Vector2f position;
+  Vector2f endposition;
   Vector2f velocity;
 };
 #endif
