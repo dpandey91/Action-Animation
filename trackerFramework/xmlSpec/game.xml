@@ -80,6 +80,7 @@
 <dragon1>
   <file>images/dragonsheet.png</file>
   <startLoc x="90" y="191"/>
+  <endLoc x="1110" y="110"/>
   <xframes>1</xframes>
   <yframes>12</yframes>
   <frameInterval>20</frameInterval>
@@ -93,6 +94,7 @@
   <filePositive>images/dragonsheet2-right.png</filePositive>
   <fileNegative>images/dragonsheet2-left.png</fileNegative>
   <startLoc x="84" y="270"/>
+  <endLoc x="-1" y="-1"/>
   <xframes>1</xframes>
   <yframes>6</yframes>
   <frameInterval>50</frameInterval>
@@ -106,7 +108,7 @@
   <filePositive>images/dragonsheet3-right.png</filePositive>
   <fileNegative>images/dragonsheet3-left.png</fileNegative>
   <startLoc x="67" y="100"/>
-  <endLoc x="978" y="63"/>
+  <endLoc x="-1" y="-1"/>
   <xframes>1</xframes>
   <yframes>20</yframes>
   <frameInterval>20</frameInterval>

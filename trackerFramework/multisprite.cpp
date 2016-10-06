@@ -74,7 +74,7 @@ void MultiSprite::draw() const {
 void MultiSprite::update(Uint32 ticks) {
   
   Vector2f currPos = getPosition();
-  if(currPos < getEndPosition() || bComeback){
+  if(getEndPosition() != -1 && (currPos < getEndPosition() || bComeback)){
       advanceFrame(ticks);
 
       Vector2f incr = getVelocity() * static_cast<float>(ticks) * 0.001;

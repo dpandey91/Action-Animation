@@ -17,6 +17,10 @@ public:
   bool operator!=(const Vector2f &other) const {
     return (v[0]!=other.v[0] or v[1] != other.v[1]);
   }
+  
+  bool operator!=(const int n) const {
+    return (v[0]!=n && v[1] != n);
+  }
 		
   Vector2f operator*(float scale) const;
   Vector2f operator/(float scale) const;
