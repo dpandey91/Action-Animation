@@ -11,7 +11,7 @@
 // and must have.
 class Drawable {
 public:
-  Drawable(const bool aComeback, const std::string& n, const Vector2f& pos, const Vector2f& endpos, const Vector2f& vel): 
+  Drawable(const bool aComeback, const std::string& n, const Vector2f& pos, const Vector2f& vel): 
     bComeback(aComeback), name(n), position(pos), velocity(vel) {}
 
   Drawable(const Drawable& s) : 
