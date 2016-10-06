@@ -6,9 +6,9 @@
 class Sprite : public Drawable {
 public:
   Sprite(const std::string&);
-  Sprite(const bool aComeback, const std::string&, const Vector2f& pos, const Vector2f& endpos, const Vector2f& vel);
+  Sprite(const bool aComeback, const std::string&, const Vector2f& pos, const Vector2f& vel);
   Sprite(const bool aComeback, const std::string&, 
-         const Vector2f& pos, const Vector2f& endpos, const Vector2f& vel, const Frame*);
+         const Vector2f& pos, const Vector2f& vel, const Frame*);
   Sprite(const Sprite& s);
   Sprite& operator=(const Sprite& rhs);
   
