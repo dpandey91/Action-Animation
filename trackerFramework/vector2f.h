@@ -24,11 +24,14 @@ public:
   Vector2f operator+(const Vector2f &other) const;
   Vector2f operator-(const Vector2f &other) const;
   Vector2f operator-() const;
-		
+	
+  bool operator>=(const Vector2f &other) const;
+    
   const Vector2f &operator*=(float scale);
   const Vector2f &operator/=(float scale);
   const Vector2f &operator+=(const Vector2f &other);
   const Vector2f &operator-=(const Vector2f &other);
+  
 		
   float magnitude() const;
   float magnitudeSquared() const;
