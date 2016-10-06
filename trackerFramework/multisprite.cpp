@@ -29,6 +29,25 @@ MultiSprite::MultiSprite( const std::string& name) :
   frameHeight(frames[0]->getHeight())
 { }
 
+MultiSprite(const std::string&, const std::vector<Frame *>& fms):
+  Drawable(Gamedata::getInstance().getXmlBool(name+"/comeback"),
+           name,
+           Vector2f(Gamedata::getInstance().getXmlInt(name+"/startLoc/x"), 
+                    Gamedata::getInstance().getXmlInt(name+"/startLoc/y")), 
+           Vector2f(Gamedata::getInstance().getXmlInt(name+"/speedX"),
+                    Gamedata::getInstance().getXmlInt(name+"/speedY"))
+           ),
+  frames( fms ),
+  worldWidth(Gamedata::getInstance().getXmlInt("world/width")),
+  worldHeight(Gamedata::getInstance().getXmlInt("world/height")),
+  currentFrame(0),
+  numberOfFrames( Gamedata::getInstance().getXmlInt(name+"/xframes") * Gamedata::getInstance().getXmlInt(name+"/yframes") ),
+  frameInterval( Gamedata::getInstance().getXmlInt(name+"/frameInterval") ),
+  timeSinceLastFrame( 0 ),
+  frameWidth(frames[0]->getWidth()),
+  frameHeight(frames[0]->getHeight())
+{ }
+
 MultiSprite::MultiSprite(const MultiSprite& s) :
   Drawable(s), 
   frames(s.frames),

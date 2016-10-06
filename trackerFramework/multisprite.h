@@ -7,6 +7,7 @@
 class MultiSprite : public Drawable {
 public:
   MultiSprite(const std::string&);
+  MultiSprite(const std::string&, const std::vector<Frame *>& fms);
   MultiSprite(const MultiSprite&);
   virtual ~MultiSprite() { } 
 
@@ -28,6 +29,6 @@ protected:
   int frameWidth;
   int frameHeight;
 
-  void advanceFrame(Uint32 ticks);
+  virtual void advanceFrame(Uint32 ticks);
 };
 #endif
