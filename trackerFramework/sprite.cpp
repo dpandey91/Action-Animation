@@ -72,23 +72,30 @@ int Sprite::getDistance(const Sprite *obj) const {
 }
 
 void Sprite::update(Uint32 ticks) { 
-  Vector2f incr = getVelocity() * static_cast<float>(ticks) * 0.001;
-  setPosition(getPosition() + incr);
 
-  if ( Y() < 0) {
-    velocityY( abs( velocityY() ) );
+  Vector2f currPos = getPosition();
+  if(currPos < getEndPosition()){
+      
+      Vector2f incr = getVelocity() * static_cast<float>(ticks) * 0.001;
+      setPosition(currPos + incr);
+
+      if ( Y() < 0) {
+        velocityY( abs( velocityY() ) );
+      }
+
+      if ( X() < 0) {
+        velocityX( abs( velocityX() ) );
+      }
+      
+      if(bComeback){
+        if ( Y() > worldHeight-frameHeight) {
+            velocityY( -abs( velocityY() ) );
+        }
+        if ( X() > worldWidth-frameWidth) {
+            velocityX( -abs( velocityX() ) );
+        }
+      }
   }
 
-  if ( X() < 0) {
-    velocityX( abs( velocityX() ) );
-  }
   
-  if(bComeback){
-    if ( Y() > worldHeight-frameHeight) {
-        velocityY( -abs( velocityY() ) );
-    }
-    if ( X() > worldWidth-frameWidth) {
-        velocityX( -abs( velocityX() ) );
-    }
-  }
 }

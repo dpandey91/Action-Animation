@@ -42,6 +42,8 @@ public:
   void setVelocity(const Vector2f& vel) { velocity = vel;  }
   const Vector2f& getPosition() const   { return position; }
   void setPosition(const Vector2f& pos) { position = pos;  }
+  const Vector2f& getEndPosition() const   { return endposition; }
+  void setEndPosition(const Vector2f& pos) { endposition = pos;  }
 
   virtual bool collidedWith(const Drawable*) const { 
     throw std::string("No collidedWith");  
