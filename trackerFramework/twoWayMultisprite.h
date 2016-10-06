@@ -2,7 +2,7 @@
 #define TWOWAYMULTISPRITE__H
 #include <string>
 #include <vector>
-#include "multiSprite.h"
+#include "multisprite.h"
 
 class TwoWayMultiSprite : public MultiSprite {
 public:
