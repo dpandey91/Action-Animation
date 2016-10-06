@@ -115,3 +115,11 @@ bool Vector2f::operator<(const Vector2f &other) const {
     return bRet;
 }
 
+bool Vector2f::operator>(const Vector2f &other) const {
+	bool bRet = false;
+    if((v[0] > other.v[0] && v[1] < other.v[1]))
+        bRet = true;
+    
+    return bRet;
+}
+

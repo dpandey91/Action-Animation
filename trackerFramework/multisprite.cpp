@@ -75,7 +75,7 @@ void MultiSprite::update(Uint32 ticks) {
   
   Vector2f currPos = getPosition();
   Vector2f endPos = getEndPosition();
-  if(endPos != -1 || currPos < endPos || bComeback){
+  if(endPos != -1 || !(currPos > endPos) || bComeback){
       advanceFrame(ticks);
 
       Vector2f incr = getVelocity() * static_cast<float>(ticks) * 0.001;
