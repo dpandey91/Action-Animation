@@ -78,10 +78,10 @@
 </font>
 
 <dragon1>
-  <file>images/fireball.png</file>
+  <file>images/fireballsheet.png</file>
   <startLoc x="90" y="191"/>
   <xframes>1</xframes>
-  <yframes>12</yframes>
+  <yframes>63</yframes>
   <frameInterval>20</frameInterval>
   <speedX>-200</speedX>
   <speedY>10</speedY>
