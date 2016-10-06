@@ -96,6 +96,4 @@ void Sprite::update(Uint32 ticks) {
         }
       }
   }
-
-  
 }
