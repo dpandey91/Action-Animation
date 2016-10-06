@@ -7,7 +7,7 @@
 class MultiSprite : public Drawable {
 public:
   MultiSprite(const std::string&);
-  MultiSprite(const std::string&, const std::vector<Frame *>& fms);
+  MultiSprite(const std::string&, const std::vector<Frame *>& fms, const int nFrameMul = 1);
   MultiSprite(const MultiSprite&);
   virtual ~MultiSprite() { } 
 

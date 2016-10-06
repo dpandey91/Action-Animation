@@ -22,7 +22,7 @@ void TwoWayMultiSprite::advanceFrame(Uint32 ticks) {
 }
 
 TwoWayMultiSprite::TwoWayMultiSprite( const std::string& name) :
-  MultiSprite(name, FrameFactory::getInstance().getTwoWayFrames(name))
+  MultiSprite(name, FrameFactory::getInstance().getTwoWayFrames(name), 2)
 { }
 
 TwoWayMultiSprite::TwoWayMultiSprite(const TwoWayMultiSprite& s) :
