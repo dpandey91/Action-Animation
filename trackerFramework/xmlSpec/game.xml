@@ -79,12 +79,12 @@
 
 <fireball>
   <file>images/fireballsheet.png</file>
-  <startLoc x="250" y="270"/>
+  <startLoc x="20" y="70"/>
   <xframes>1</xframes>
   <yframes>17</yframes>
   <frameInterval>50</frameInterval>
-  <speedX>100</speedX>
-  <speedY>0</speedY>
+  <speedX>103</speedX>
+  <speedY>o</speedY>
   <comeback>true</comeback>
   <transparency>false</transparency>
 </fireball>
@@ -97,7 +97,7 @@
   <yframes>6</yframes>
   <frameInterval>50</frameInterval>
   <speedX>100</speedX>
-  <speedY>2</speedY>
+  <speedY>8</speedY>
   <comeback>true</comeback>
   <transparency>false</transparency>
 </drogon>
@@ -114,8 +114,6 @@
   <comeback>true</comeback>
   <transparency>true</transparency>
 </viserion>
-
-
 
 <blackpearl>
   <file>images/ship2.png</file>

@@ -40,12 +40,12 @@ Manager::Manager() :
   }
   SDL_WM_SetCaption(title.c_str(), NULL);
   atexit(SDL_Quit);
-  sprites.push_back( new MultiSprite("fireball") );
-  sprites.push_back( new TwoWayMultiSprite("drogon") );
-  sprites.push_back( new TwoWayMultiSprite("viserion") );
   sprites.push_back( new Sprite("blackpearl") );
   sprites.push_back( new Sprite("interceptor") );
-// sprites.push_back( new Sprite("ship3") );
+  sprites.push_back( new TwoWayMultiSprite("drogon") );
+  sprites.push_back( new TwoWayMultiSprite("viserion") );
+  sprites.push_back( new MultiSprite("fireball") );
+  currentSprite = sprites.size() - 1;
   viewport.setObjectToTrack(sprites[currentSprite]);
 }
 
@@ -67,9 +67,7 @@ void Manager::draw() const {
   io.printMessageAt("Press T to switch sprites", 10, 65);
   io.printMessageAt(title, 10, 450);
   viewport.draw();
-
-
-  
+ 
   SDL_Flip(screen);
 }
 
