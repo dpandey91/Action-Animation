@@ -51,6 +51,7 @@ Manager::Manager() :
 }
 
 void Manager::draw() const {
+    
   world.draw();
   map.draw();
   castleBig.draw();
@@ -60,7 +61,7 @@ void Manager::draw() const {
     sprites[i]->draw();
   }
   
-//  cloud.draw();
+  cloud.draw();
 
   io.printMessageValueAt("Seconds: ", clock.getSeconds(), 10, 20);
   io.printMessageValueAt("fps: ", clock.getAvgFrameRate(), 10, 40);
@@ -68,6 +69,8 @@ void Manager::draw() const {
   io.printMessageAt(title, 10, 450);
   viewport.draw();
 
+
+  
   SDL_Flip(screen);
 }
 
