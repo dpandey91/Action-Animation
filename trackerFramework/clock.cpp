@@ -29,7 +29,6 @@ Clock::Clock() :
   sumAvg(0u),
   fpsQue()
 {
-  fpsQue.reserve(frameRateCap);
   start();
 }
 
