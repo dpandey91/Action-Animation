@@ -82,8 +82,8 @@
   <startLoc x="20" y="70"/>
   <xframes>1</xframes>
   <yframes>17</yframes>
-  <frameInterval>50</frameInterval>
-  <speedX>103</speedX>
+  <frameInterval>80</frameInterval>
+  <speedX>63</speedX>
   <speedY>o</speedY>
   <comeback>true</comeback>
   <transparency>false</transparency>
@@ -95,8 +95,8 @@
   <startLoc x="54" y="210"/>
   <xframes>1</xframes>
   <yframes>6</yframes>
-  <frameInterval>50</frameInterval>
-  <speedX>100</speedX>
+  <frameInterval>80</frameInterval>
+  <speedX>60</speedX>
   <speedY>8</speedY>
   <comeback>true</comeback>
   <transparency>false</transparency>
@@ -108,8 +108,8 @@
   <startLoc x="67" y="80"/>
   <xframes>1</xframes>
   <yframes>20</yframes>
-  <frameInterval>20</frameInterval>
-  <speedX>100</speedX>
+  <frameInterval>80</frameInterval>
+  <speedX>60</speedX>
   <speedY>0</speedY>
   <comeback>true</comeback>
   <transparency>true</transparency>
