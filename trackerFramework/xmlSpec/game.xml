@@ -77,72 +77,64 @@
   <unused>0</unused>
 </font>
 
-<dragon1>
+<fireball>
   <file>images/fireballsheet.png</file>
-  <startLoc x="90" y="191"/>
+  <startLoc x="250" y="270"/>
   <xframes>1</xframes>
-  <yframes>64</yframes>
-  <frameInterval>20</frameInterval>
-  <speedX>-200</speedX>
-  <speedY>100</speedY>
+  <yframes>17</yframes>
+  <frameInterval>50</frameInterval>
+  <speedX>100</speedX>
+  <speedY>0</speedY>
   <comeback>true</comeback>
   <transparency>false</transparency>
-</dragon1>
+</fireball>
 
-<dragon2>
+<drogon>
   <filePositive>images/dragonsheet2-right.png</filePositive>
   <fileNegative>images/dragonsheet2-left.png</fileNegative>
-  <startLoc x="84" y="270"/>
+  <startLoc x="54" y="210"/>
   <xframes>1</xframes>
   <yframes>6</yframes>
   <frameInterval>50</frameInterval>
-  <speedX>-100</speedX>
-  <speedY>10</speedY>
+  <speedX>100</speedX>
+  <speedY>2</speedY>
   <comeback>true</comeback>
   <transparency>false</transparency>
-</dragon2>
+</drogon>
 
-<dragon3>
+<viserion>
   <filePositive>images/dragonsheet3-right.png</filePositive>
   <fileNegative>images/dragonsheet3-left.png</fileNegative>
   <startLoc x="67" y="80"/>
   <xframes>1</xframes>
   <yframes>20</yframes>
   <frameInterval>20</frameInterval>
-  <speedX>-100</speedX>
+  <speedX>100</speedX>
   <speedY>0</speedY>
   <comeback>true</comeback>
   <transparency>true</transparency>
-</dragon3>
+</viserion>
 
-<ship1>
-  <file>images/ship1.png</file>
-  <startLoc x="640" y="560"/>
-  <frameInterval>20</frameInterval>
-  <speedX>-20</speedX>
-  <speedY>0</speedY>
-  <comeback>false</comeback>
-  <transparency>true</transparency>
-</ship1>
 
-<ship2>
+
+<blackpearl>
   <file>images/ship2.png</file>
   <startLoc x="978" y="63"/>
   <frameInterval>20</frameInterval>
-  <speedX>-20</speedX>
+  <speedX>10</speedX>
   <speedY>0</speedY>
   <comeback>false</comeback>
   <transparency>true</transparency>
-</ship2>
+</blackpearl>
 
-<ship3>
+<interceptor>
   <file>images/ship3.png</file>
   <startLoc x="458" y="88"/>
   <frameInterval>20</frameInterval>
-  <speedX>-20</speedX>
+  <speedX>10</speedX>
   <speedY>0</speedY>
   <comeback>false</comeback>
   <transparency>true</transparency>
-</ship3>
+</interceptor>
 
 </GameData>

@@ -40,13 +40,12 @@ Manager::Manager() :
   }
   SDL_WM_SetCaption(title.c_str(), NULL);
   atexit(SDL_Quit);
- // sprites.push_back( new MultiSprite("dragon1") );
-  sprites.push_back( new TwoWayMultiSprite("dragon2") );
-  sprites.push_back( new TwoWayMultiSprite("dragon3") );
-  sprites.push_back( new MultiSprite("dragon1") );
-  sprites.push_back( new Sprite("ship1") );
-  sprites.push_back( new Sprite("ship2") );
-  sprites.push_back( new Sprite("ship3") );
+  sprites.push_back( new MultiSprite("fireball") );
+  sprites.push_back( new TwoWayMultiSprite("drogon") );
+  sprites.push_back( new TwoWayMultiSprite("viserion") );
+  sprites.push_back( new Sprite("blackpearl") );
+  sprites.push_back( new Sprite("interceptor") );
+// sprites.push_back( new Sprite("ship3") );
   viewport.setObjectToTrack(sprites[currentSprite]);
 }
 
